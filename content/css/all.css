@@ -106,7 +106,9 @@ body {
 .header-head, .header-menu {
   position: fixed;
   top: 0;
-  z-index: 99; }
+  z-index: 99;
+  transition: .4s;
+  transition-timing-function: linear; }
 
 .header-head {
   left: 0;
@@ -121,17 +123,20 @@ body {
 
 @media only screen and (max-width: 1023px) {
   .header {
-    height: 100px;
-    transition: .4s; }
+    height: 100px; }
     .header-head {
       height: 100px;
       background-color: #0B0B0B; }
+      .header-head.no-head {
+        background-color: transparent; }
     .header-menu {
       height: 100px;
-      background-color: transparent; }
-    .header-head + .header-menu {
       background-color: #0B0B0B; }
-    .menuOpen .header {
+    .header-head.no-head + .header-menu {
+      background-color: transparent; }
+    .menuOpen .header-head, .menuOpen .header-menu {
+      background-color: #0B0B0B; }
+    .menuOpen .header-head.no-head + .header-menu {
       background-color: #0B0B0B; } }
 
 .head {
