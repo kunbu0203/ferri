@@ -43,6 +43,7 @@
     margin-bottom: 10px; }
   .block-title {
     font-size: 36px;
+    font-weight: 500;
     color: #E6C07F; }
   .block-content {
     flex: 1;

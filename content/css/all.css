@@ -1,8 +1,8 @@
 html,
 body {
   font-family: "Noto Serif TC", sans-serif, Arial, "Microsoft JhengHei", Helvetica;
+  -webkit-font-smoothing: antialiased;
   font-size: 16px;
-  font-weight: 200;
   line-height: 1.5;
   color: #fff; }
 
@@ -168,6 +168,7 @@ body {
     margin-left: 120px; }
   .anchor-link {
     font-size: 22px;
+    font-weight: 500;
     color: #666666;
     text-decoration: none; }
     .anchor-link.active {
@@ -206,6 +207,7 @@ body {
     height: 57%; }
     .menu-title span {
       font-size: 18px;
+      font-weight: 500;
       -webkit-writing-mode: vertical-lr;
           -ms-writing-mode: tb-lr;
               writing-mode: vertical-lr;
@@ -279,6 +281,7 @@ body {
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
+    font-weight: 500;
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -286,14 +289,13 @@ body {
     .menuOpen .burger-text {
       opacity: 0; }
   .menuOpen .burger-bar {
-    width: 24px;
     transform-origin: center; }
     .menuOpen .burger-bar:first-of-type {
-      transform: translate(-50%, -50%) rotate(-45deg); }
+      transform: translate(-50%, -50%) rotate(-45deg) scale(0.75); }
     .menuOpen .burger-bar:nth-of-type(2) {
       opacity: 0; }
     .menuOpen .burger-bar:nth-of-type(3) {
-      transform: translate(-50%, -50%) rotate(45deg); }
+      transform: translate(-50%, -50%) rotate(45deg) scale(0.75); }
   @media only screen and (min-width: 1024px) {
     .burger:hover .burger-bar {
       width: 16px; }
@@ -341,13 +343,14 @@ body {
   .nav-title {
     margin-bottom: 35px;
     font-size: 26px;
-    font-weight: 500;
+    font-weight: 700;
     color: #E6C07F;
     letter-spacing: 1px; }
   .nav-item + .nav-item {
     margin-top: 30px; }
   .nav-link {
     font-size: 24px;
+    font-weight: 500;
     color: #fff;
     text-decoration: none;
     letter-spacing: 1px;
@@ -481,7 +484,8 @@ body {
 .links {
   display: flex;
   flex-wrap: wrap;
-  font-size: 20px; }
+  font-size: 20px;
+  font-weight: 500; }
   .links a {
     margin: 0 7% 10px 0;
     color: #fff;
@@ -517,7 +521,8 @@ body {
     .info-icon img {
       width: 100%; }
   .info-text {
-    color: #E6C07F; }
+    color: #E6C07F;
+    font-weight: 500; }
   @media only screen and (min-width: 1024px) {
     .info-item:hover {
       opacity: 0.7; } }
@@ -588,7 +593,8 @@ body {
     display: inline-block;
     vertical-align: middle; }
   .btn span {
-    font-size: 22px; }
+    font-size: 22px;
+    font-weight: 500; }
   .btn-icon,
   .btn img {
     margin-top: 2px;
@@ -662,7 +668,8 @@ body {
   span + .subBtn-icon {
     margin-left: 10px; }
   .subBtn span {
-    font-size: 22px; }
+    font-size: 22px;
+    font-weight: 500; }
   .subBtn-icon {
     width: 20px;
     height: 20px;
@@ -722,7 +729,8 @@ body {
   .link span {
     display: inline-block;
     vertical-align: middle;
-    font-size: 22px; }
+    font-size: 22px;
+    font-weight: 500; }
   .link img {
     margin-top: 0.1em;
     width: 0.9em;
@@ -745,22 +753,6 @@ body {
       font-size: 16px; }
     .link img {
       margin-top: 0; } }
-
-ol {
-  margin: 0;
-  padding-left: 30px; }
-  ol > li > ol {
-    list-style-type: none;
-    padding-left: 32px; }
-    ol > li > ol > li {
-      position: relative;
-      counter-increment: section; }
-      ol > li > ol > li::before {
-        content: "(" counter(section, decimal) ")";
-        position: absolute;
-        top: 0;
-        left: -5px;
-        transform: translateX(-100%); }
 
 .popup {
   position: fixed;

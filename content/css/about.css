@@ -123,22 +123,13 @@
   height: 68%; }
 
 @media only screen and (max-width: 1023px) {
-  [data-animate-block="active"]::before {
-    padding-bottom: 18%; }
+  [data-animate-block="active"].block::before {
+    transform: translateY(-50%) scaleY(1); }
   [data-animate-block="active"].block.group::before {
-    padding-bottom: 16%; }
+    transform: scaleY(1); }
   [data-animate-block="active"].block.group .block-content::after {
     height: auto;
-    padding-bottom: 16%; } }
-
-@media only screen and (max-width: 767px) {
-  [data-animate-block="active"]::before {
-    padding-bottom: 32%; }
-  [data-animate-block="active"].block.group::before {
-    padding-bottom: 43%; }
-  [data-animate-block="active"].block.group .block-content::after {
-    height: auto;
-    padding-bottom: 40%; } }
+    transform: translateY(-110%) scaleY(1); } }
 
 .block {
   display: flex;
@@ -167,6 +158,7 @@
     margin: 1.2em 0 0.7em;
     padding: 0 1em;
     font-size: 2.3vw;
+    font-weight: 500;
     line-height: 1.5;
     color: #E6C07F;
     text-align: center; }
@@ -188,6 +180,7 @@
   .block .title {
     margin-bottom: 0.7em;
     font-size: 2.3vw;
+    font-weight: 500;
     color: #E6C07F; }
   .block.founder {
     font-size: 1.25vw;
@@ -268,10 +261,13 @@
       .block::before {
         content: '';
         position: absolute;
-        top: -8%;
+        top: 0;
         left: 50%;
         width: 1px;
+        padding-bottom: 18%;
         background-color: #fff;
+        transform: translateY(-50%) scaleY(0);
+        transform-origin: top;
         transition: 2s; }
       .block-pic {
         order: 1; }
@@ -337,7 +333,9 @@
       .block.group {
         padding-top: 20%; }
         .block.group::before {
-          top: 0; }
+          top: 0;
+          transform: scaleY(0);
+          padding-bottom: 17%; }
       .block.group .block-pic {
         width: 100%;
         max-width: 450px;
@@ -348,12 +346,16 @@
         .block.group .block-content::after {
           top: 0;
           bottom: auto;
-          transform: translateY(-110%);
-          height: auto; } }
+          transform: translateY(-110%) scaleY(0);
+          transform-origin: bottom;
+          height: auto;
+          padding-bottom: 16%; } }
   @media only screen and (max-width: 767px) {
     .block {
       padding: 20% 5.5%;
       font-size: 16px; }
+      .block::before {
+        padding-bottom: 32%; }
       .block.founder {
         padding-top: 10%;
         font-size: 14px; }
@@ -367,8 +369,13 @@
         padding-top: 20%; }
       .block.group {
         padding-top: 50%; }
+        .block.group::before {
+          padding-bottom: 43%; }
       .block.group .block-content {
-        margin-top: 50%; } }
+        margin-top: 50%; }
+        .block.group .block-content::after {
+          height: auto;
+          padding-bottom: 40%; } }
 
 @media only screen and (min-width: 768px) {
   .padDown {
