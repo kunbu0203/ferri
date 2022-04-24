@@ -65,6 +65,7 @@
     display: flex;
     align-items: center;
     font-size: 36px;
+    font-weight: 500;
     color: #E6C07F; }
     .formBlock-head::before, .formBlock-head::after {
       content: '';
