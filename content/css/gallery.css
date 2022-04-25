@@ -59,9 +59,10 @@
   @media only screen and (max-width: 767px) {
     .gallery {
       position: relative;
-      max-width: 400px;
-      height: calc(100vh - 170px);
-      margin: 35px auto; }
+      max-width: 460px;
+      height: calc(100vh - 135px);
+      margin: 35px auto 0;
+      padding: 0 30px; }
       .gallery::before {
         content: '';
         position: absolute;
@@ -69,34 +70,32 @@
         left: 0;
         width: 100%;
         height: 150px;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 20%, #000 80%);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 30%, #000 80%);
+        transition: .4s;
         pointer-events: none;
         z-index: 2; }
       .gallery .swiper-slide {
         height: auto; }
       .gallery .swiper-scrollbar {
         position: absolute;
-        top: calc(100% - 105px);
-        left: 0;
+        top: 30px;
+        left: auto;
+        right: 14px;
         box-sizing: border-box;
         width: 2px;
-        height: 400px;
+        height: calc(100% - 100px);
         margin: 0;
         background-color: #888;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        transform: rotate(-90deg);
-        transform-origin: top left;
         z-index: 5; }
-      .gallery .swiper-arrow {
-        position: absolute;
-        bottom: 70px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 6; }
       .gallery .swiper-button-next,
       .gallery .swiper-button-prev {
+        position: absolute;
+        left: auto;
+        right: 5px;
         width: 20px;
         height: 20px;
+        margin: 0;
         padding: 0;
         font-size: 0;
         border: none;
@@ -104,14 +103,17 @@
         background-repeat: no-repeat;
         background-position: center; }
       .gallery .swiper-button-prev {
-        transform: rotate(180deg); } }
-  @media only screen and (max-width: 465px) {
+        top: 0;
+        transform: rotate(180deg); }
+      .gallery .swiper-button-next {
+        top: auto;
+        bottom: 40px; }
+      .gallery.pageEnd::before {
+        height: 0; } }
+  @media only screen and (max-width: 440px) {
     .gallery {
-      height: calc(100vh - 130px);
-      margin: 15px 7%; }
-      .gallery .swiper-scrollbar {
-        height: auto;
-        padding-bottom: 100%; } }
+      height: calc(100vh - 145px);
+      margin: 25px 0 0; } }
 
 .gird {
   padding: 0 7.5%; }

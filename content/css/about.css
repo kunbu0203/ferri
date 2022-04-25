@@ -66,16 +66,16 @@
 [data-animate-block="active"] [data-animate="fade-in"] {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
 [data-animate-block="active"] [data-animate="blur-in"] {
   -webkit-animation-name: blurIn;
           animation-name: blurIn;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
@@ -149,7 +149,7 @@
       position: absolute;
       width: 1px;
       background-color: #fff;
-      transition: 2s; }
+      transition: 1.5s; }
     .block-content .text {
       text-align: left; }
   .block .intro {
@@ -251,7 +251,7 @@
       width: 1px;
       height: 0;
       background-color: #fff;
-      transition: 2s; }
+      transition: 1.5s; }
   @media only screen and (max-width: 1023px) {
     .block {
       position: relative;
@@ -268,7 +268,7 @@
         background-color: #fff;
         transform: translateY(-50%) scaleY(0);
         transform-origin: top;
-        transition: 2s; }
+        transition: 1.5s; }
       .block-pic {
         order: 1; }
       .block-content {

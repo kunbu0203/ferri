@@ -186,6 +186,8 @@
       height: 12px;
       border: 1px solid #E6C07F;
       cursor: pointer; }
+    .checkbox label a {
+      color: #E6C07F; }
   .checkbox input:checked + label::before {
     background-image: url(./../images/icon/check.svg);
     background-repeat: no-repeat;
