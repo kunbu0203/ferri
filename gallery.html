@@ -787,15 +787,38 @@ $(function () {
     direction: 'vertical',
     slidesPerView: 'auto',
     spaceBetween: 16,
-    slidesOffsetAfter: 70,
+    slidesOffsetAfter: 40,
     scrollbar: {
       el: '.swiper-scrollbar'
     },
     navigation: {
       prevEl: '.swiper-button-prev',
       nextEl: '.swiper-button-next'
+    },
+    on: {
+      init: function init() {
+        maskShowHide(this);
+      },
+      touchMove: function touchMove() {
+        maskShowHide(this);
+      },
+      resize: function resize() {
+        this.update();
+        maskShowHide(this);
+      },
+      transitionEnd: function transitionEnd() {
+        maskShowHide(this);
+      }
     }
   });
+
+  function maskShowHide(swiper) {
+    if (swiper.isEnd) {
+      $(swiper.el).addClass('pageEnd');
+    } else {
+      $(swiper.el).removeClass('pageEnd');
+    }
+  }
 });
 </script>
 
