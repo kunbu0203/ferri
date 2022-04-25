@@ -83,7 +83,7 @@
         right: 14px;
         box-sizing: border-box;
         width: 2px;
-        height: calc(100% - 115px);
+        height: calc(100% - 180px);
         margin: 0;
         background-color: #888;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -107,7 +107,7 @@
         transform: rotate(180deg); }
       .gallery .swiper-button-next {
         top: auto;
-        bottom: 55px; }
+        bottom: 120px; }
       .gallery.pageEnd::before {
         height: 0; } }
   @media only screen and (max-width: 440px) {
