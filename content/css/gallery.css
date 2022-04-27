@@ -218,21 +218,18 @@
   .content-text {
     line-height: 2; }
   .content-wrap {
-    display: -webkit-box;
-    max-height: 6em;
-    font-size: 22px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical; }
+    font-size: 22px; }
+  .content-text.-detail {
+    display: none; }
   .content-action {
     display: flex;
     margin-top: 20px; }
   .content.isOpen .content-collapse {
     background-image: url(./../images/icon/close.svg); }
-  .content.isOpen .content-wrap {
-    max-height: none;
-    -webkit-line-clamp: unset; }
+  .content.isOpen .content-text.-simple {
+    display: none; }
+  .content.isOpen .content-text.-detail {
+    display: block; }
   @media only screen and (max-width: 1480px) {
     .content {
       padding: 20px; }
@@ -262,9 +259,10 @@
         margin-bottom: 30px;
         padding-right: 0;
         font-size: 30px; }
-      .content-wrap {
-        max-height: none;
-        -webkit-line-clamp: unset; }
+      .content-text.-simple {
+        display: none; }
+      .content-text.-detail {
+        display: block; }
       .content-action {
         margin-top: 40px; } }
   @media only screen and (max-width: 767px) {
