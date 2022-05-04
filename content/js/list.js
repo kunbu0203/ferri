@@ -4,7 +4,8 @@ $(function () {
     offset: 200,
     duration: 1500,
     once: true
-  });
+  }); // 下拉頁籤
+
   $('[data-tab-select]').on('change', function (e) {
     e.preventDefault();
     var val = $(this).val();
