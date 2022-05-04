@@ -80,15 +80,17 @@
     .banner-logo img {
       width: 450px; }
   .banner-content {
+    position: relative;
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 450px; }
-  .banner-intro {
-    flex: 1 0 auto; }
   .banner-btn {
-    flex: 0 0 auto;
-    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(50%);
     -webkit-animation-name: fade;
             animation-name: fade;
     -webkit-animation-duration: 0.4s;
@@ -123,6 +125,8 @@
         height: auto;
         margin-top: 30px; }
       .banner-btn {
+        position: static;
+        transform: none;
         margin-top: 40px;
         text-align: center; } }
 
